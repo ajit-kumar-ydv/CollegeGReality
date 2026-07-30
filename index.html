@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Ground Reality — Honest & Unfiltered College Guidance</title>
+  <!-- Instant SVG Favicon (Graduation Cap) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tally Embed Script (Required for modals and embedded forms) -->
+  <script src="https://tally.so/widgets/embed.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#0A192F',
+              dark: '#060D19',
+              card: '#112240'
+            },
+            realityGreen: '#00E676',
+            techBlue: '#00B0FF',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .bg-gradient-text {
+      background: linear-gradient(135deg, #00B0FF 0%, #00E676 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-navy-dark text-slate-100 antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Responsive Navbar -->
+  <nav class="border-b border-slate-800 bg-navy/90 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
+
+      <!-- Brand Logo & Title -->
+      <a href="#" class="flex items-center gap-2.5 shrink-0">
+        <div
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-techBlue to-realityGreen flex items-center justify-center font-extrabold text-navy-dark text-base sm:text-lg shadow-lg shrink-0">
+          CGR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm sm:text-lg tracking-tight text-white leading-tight">
+            College Ground Reality
+          </span>
+          <span
+            class="text-[9px] sm:text-[10px] text-realityGreen font-semibold tracking-wider uppercase hidden xs:block">
+            Honest • Unfiltered
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Visible on Tablet & Above) -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-300">
+        <a href="#features" class="hover:text-realityGreen transition-colors">Why CGR</a>
+        <a href="#submit-review" class="hover:text-realityGreen transition-colors">Submit Review</a>
+        <a href="#free-resources" class="hover:text-realityGreen transition-colors">Free Guide</a>
+        <a href="#founder" class="hover:text-realityGreen transition-colors">About Founder</a>
+      </div>
+
+      <!-- Action Button (Optimized for Mobile & Desktop) -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button data-tally-open="PdL4Dx" data-tally-layout="modal"
+          class="bg-realityGreen hover:bg-emerald-400 text-navy-dark font-extrabold px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm transition-all transform active:scale-95 shadow-md shadow-realityGreen/20 cursor-pointer whitespace-nowrap">
+          Join Waitlist
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Quick Navigation Bar (Visible only on mobile screens < 768px) -->
+    <div
+      class="flex md:hidden items-center justify-around border-t border-slate-800/80 bg-navy-dark/95 py-2 px-4 text-xs font-medium text-slate-300 overflow-x-auto">
+      <a href="#features" class="hover:text-realityGreen py-1 px-2 whitespace-nowrap">Why CGR</a>
+      <span class="text-slate-700">•</span>
+      <a href="#submit-review" class="hover:text-realityGreen py-1 px-2 whitespace-nowrap">Review</a>
+      <span class="text-slate-700">•</span>
+      <a href="#free-resources" class="hover:text-realityGreen py-1 px-2 whitespace-nowrap">Free Guide</a>
+      <span class="text-slate-700">•</span>
+      <a href="#founder" class="hover:text-realityGreen py-1 px-2 whitespace-nowrap">Founder</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center relative">
+    <!-- Background Glow Accent -->
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-techBlue/10 rounded-full blur-3xl -z-10">
+    </div>
+
+    <span
+      class="inline-block px-4 py-1.5 rounded-full bg-navy-card border border-slate-700 text-realityGreen text-xs font-bold mb-6 tracking-wide">
+      🚫 ZERO PAID ADS • 100% UNFILTERED DATA
+    </span>
+
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+      Beyond College Advertisements. <br />
+      <span class="bg-gradient-text">Discover The Ground Reality.</span>
+    </h1>
+
+    <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+      Stop relying on glossy brochures and fake placement stats. Request real median package reports, honest campus
+      reviews, and verified student insights.
+    </p>
+
+    <!-- Search Bar & Hero Waitlist Trigger Button -->
+    <div id="search"
+      class="max-w-2xl mx-auto bg-navy-card border border-slate-700 rounded-2xl p-2 shadow-2xl flex flex-col md:flex-row gap-2">
+      <input type="text" placeholder="Click on the Get Ground Truth button" disabled
+        class="bg-transparent px-4 py-3 text-white placeholder-slate-500 focus:outline-none flex-grow text-sm">
+      <button data-tally-open="1AzODM" data-tally-layout="modal"
+        class="bg-gradient-to-r from-techBlue to-realityGreen hover:opacity-90 text-navy-dark font-bold px-8 py-3 rounded-xl text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        Get Ground Truth
+      </button>
+    </div>
+  </header>
+
+  <!-- Infinite Auto-Scrolling CTA Banner (Zero JS) -->
+<div class="w-full bg-navy-card/90 border-y border-slate-800 py-3.5 overflow-hidden whitespace-nowrap relative my-8">
+    
+    <!-- Inline CSS for seamless infinite loop & hover pause -->
+     <style>
+    @keyframes ticker {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-ticker {
+        display: flex;
+        width: 200%;
+        /* Change 22s to 10s for fast, or 12s for medium speed */
+        animation: ticker 10s linear infinite; 
+    }
+    .animate-ticker:hover {
+        animation-play-state: paused;
+    }
+</style>
+
+    <div class="animate-ticker flex items-center text-xs sm:text-sm font-extrabold tracking-widest uppercase">
+        
+        <!-- Track 1 -->
+        <div class="flex items-center gap-8 shrink-0 pr-8">
+            <span class="text-realityGreen flex items-center gap-2">🔥 100% Anonymous Reviews</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-slate-200">Real Median Salaries</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-techBlue">Zero Sponsored Marketing</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-realityGreen">Direct Senior Access</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-slate-200">Unfiltered Ground Truths</span>
+            <span class="text-slate-700">•</span>
+        </div>
+
+        <!-- Track 2 (Exact duplicate creates seamless loop) -->
+        <div class="flex items-center gap-8 shrink-0 pr-8">
+            <span class="text-realityGreen flex items-center gap-2">🔥 100% Anonymous Reviews</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-slate-200">Real Median Salaries</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-techBlue">Zero Sponsored Marketing</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-realityGreen">Direct Senior Access</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-slate-200">Unfiltered Ground Truths</span>
+            <span class="text-slate-700">•</span>
+        </div>
+
+    </div>
+</div>
+
+  <!-- Free Resource / Lead Magnet Section -->
+  <section id="free-resources" class="max-w-5xl mx-auto px-6 py-12">
+    <div
+      class="bg-gradient-to-r from-navy-card via-slate-900 to-navy-card border border-techBlue/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+
+      <!-- Glow Accent -->
+      <div class="absolute top-0 right-0 w-80 h-80 bg-techBlue/10 rounded-full blur-3xl -z-0"></div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+
+        <!-- Content -->
+        <div class="text-center md:text-left max-w-xl">
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-techBlue/10 border border-techBlue/30 text-techBlue text-xs font-bold mb-4">
+            🎁 FREE WEEKLY RESOURCE
+          </span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+            Get the <span class="bg-gradient-text">2026 College Reality Index</span> (PDF)
+          </h2>
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+            We compiled actual median packages, hidden hostel fees, and placement realities across 50+ top Indian
+            engineering & management colleges into a single, unfiltered PDF.
+          </p>
+          <ul class="mt-4 space-y-2 text-xs text-slate-300">
+            <li class="flex items-center gap-2 justify-center md:justify-start">
+              <span class="text-realityGreen">✓</span> Actual vs. Advertised Salary Comparisons
+            </li>
+            <li class="flex items-center gap-2 justify-center md:justify-start">
+              <span class="text-realityGreen">✓</span> Verified Campus Red Flags & Pros
+            </li>
+          </ul>
+        </div>
+
+        <!-- Call to Action Card -->
+        <div
+          class="bg-navy-dark/80 border border-slate-700/80 p-6 rounded-2xl w-full md:w-auto shrink-0 text-center shadow-xl backdrop-blur-md">
+          <div class="text-3xl mb-2">📄</div>
+          <h3 class="text-white font-bold text-sm">Download Free Guide</h3>
+          <p class="text-slate-400 text-xs mt-1 mb-4">Instant PDF delivery to your inbox</p>
+
+          <!-- Reuses your waitlist form or newsletter link -->
+          <button data-tally-open="PdL4Dx" data-tally-layout="modal"
+            class="w-full bg-realityGreen hover:bg-emerald-400 text-navy-dark font-extrabold px-6 py-3 rounded-xl text-xs transition-all shadow-lg shadow-realityGreen/20 cursor-pointer">
+            Get Free PDF Access 🚀
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Cards Section -->
+  <section id="features" class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-navy-card border border-slate-800 p-8 rounded-2xl hover:border-techBlue/50 transition-all group">
+        <div
+          class="w-12 h-12 rounded-xl bg-techBlue/10 text-techBlue flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+          📊
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Actual Median Packages</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          We break down inflated average package claims to show you the real median numbers that 90% of students
+          actually secure.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="bg-navy-card border border-slate-800 p-8 rounded-2xl hover:border-realityGreen/50 transition-all group">
+        <div
+          class="w-12 h-12 rounded-xl bg-realityGreen/10 text-realityGreen flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+          ✅
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Verified Student Reviews</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Reviews written strictly by verified students and recent alumni. Zero PR fluff, honest hostel feedback, and
+          real faculty ratings.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-navy-card border border-slate-800 p-8 rounded-2xl hover:border-techBlue/50 transition-all group">
+        <div
+          class="w-12 h-12 rounded-xl bg-techBlue/10 text-techBlue flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+          🧑‍🎓
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">1-on-1 Student Connect</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Talk directly to seniors currently studying in the branch and college you want to join before paying admission
+          fees.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Form 2: Embedded Student Review Submission Section -->
+  <section id="submit-review" class="max-w-4xl mx-auto px-6 py-12 my-8">
+    <div class="bg-navy-card border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+      <div class="text-center mb-8">
+        <span class="text-techBlue text-xs font-bold uppercase tracking-widest">Share Your Experience</span>
+        <h2 class="text-3xl font-extrabold text-white mt-2">Are you currently in college?</h2>
+        <p class="text-slate-400 text-sm mt-2 max-w-xl mx-auto">
+          Help high school seniors avoid fake marketing promises. Submit an anonymous ground reality review about your
+          campus.
+        </p>
+      </div>
+
+      <!-- Embedded Tally Form (Form 2) -->
+      <iframe
+        data-tally-src="https://tally.so/embed/1AzODM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy" width="100%" height="350" frameborder="0" marginheight="0" marginwidth="0"
+        title="Student Review Submission">
+      </iframe>
+      <script>Tally.loadEmbeds();</script>
+    </div>
+  </section>
+
+  
+  <!-- Founder & Origin Story Section -->
+  <section id="founder" class="max-w-5xl mx-auto px-6 py-12 my-8">
+    <div class="bg-navy-card border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+      <!-- Background Glow Accent -->
+      <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-techBlue/10 rounded-full blur-3xl -z-0"></div>
+      <div class="absolute -top-10 -right-10 w-72 h-72 bg-realityGreen/10 rounded-full blur-3xl -z-0"></div>
+
+
+      <div class="grid md:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
+        <!-- Left Column: Founder Photo & Badge -->
+        <div class="md:col-span-4 flex flex-col items-center text-center">
+          <div class="relative group">
+            <!-- Gradient Ring -->
+            <div
+              class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-gradient-to-tr from-techBlue to-realityGreen p-1 shadow-2xl transition-transform duration-300 group-hover:scale-105">
+              <!-- Image Placeholder: Replace 'your-photo.jpg' with your photo link -->
+              <img src="PRESENT.png" alt="Founder" class="w-full h-full object-cover rounded-[14px]">
+            </div>
+            <span
+              class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-realityGreen text-navy-dark text-xs font-black px-4 py-1 rounded-full shadow-lg whitespace-nowrap">
+              BUILDER & FOUNDER
+            </span>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mt-6">Ajit Kumar</h3>
+          <p class="text-xs text-techBlue font-semibold">Founder, College Ground Reality</p>
+        </div>
+
+        <!-- Right Column: Story & Problem Realization -->
+        <div class="md:col-span-8 text-center md:text-left">
+          <span class="text-realityGreen text-xs font-bold uppercase tracking-widest block mb-2">
+            💡 Why I Started This
+          </span>
+
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-4">
+            "I saw too many students fall for 100% placement marketing traps."
+          </h2>
+
+          <!-- Story Paragraphs -->
+          <div class="space-y-3 text-slate-300 text-sm md:text-base leading-relaxed">
+            <p>
+              Like millions of high schoolers, I used to scroll through shiny college brochures, paid YouTube reviews,
+              and inflated placement statistics. Every college claimed an incredible average package and 100% placement
+              records.
+            </p>
+            <p>
+              <strong>The realization hit when I talked to actual seniors on campus:</strong> the real median packages
+              were often half of what was advertised, hostel restrictions were absurd, and the best learning happened
+              outside the classrooms. The glossy marketing was completely detached from reality.
+            </p>
+            <p class="text-slate-400 italic">
+              I built <strong class="text-realityGreen not-italic">College Ground Reality</strong> to create the
+              platform I wish I had—a single place where students can get raw median numbers, unedited student reviews,
+              and direct senior guidance before spending lakhs in admission fees.
+            </p>
+          </div>
+
+          <!-- Connect Links -->
+          <div class="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4">
+            <a href="https://www.linkedin.com/in/ajit-kumar-ydv" target="_blank"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all border border-slate-700 hover:border-techBlue">
+              <svg class="w-4 h-4 text-techBlue" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.72a1.47 1.47 0 1 0 0 2.94 1.47 1.47 0 0 0 0-2.94Z" />
+              </svg>
+              Connect on LinkedIn
+            </a>
+            <a href="https://www.instagram.com/collegegroundreality" target="_blank"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all border border-slate-700 hover:border-realityGreen">
+              <span>💬</span> DM Me Suggestions
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 bg-navy mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-slate-500">
+        © <span id="year"></span> <span class="text-slate-300 font-semibold">CollegeGroundReality.com</span>. All rights
+        reserved.
+      </p>
+      <div class="flex gap-6 text-xs text-slate-400">
+        <a href="https://www.instagram.com/collegegroundreality" class="hover:text-realityGreen transition-colors">Instagram</a>
+        <a href="https://x.com/CollegeGReality" class="hover:text-realityGreen transition-colors">X (Twitter)</a>
+        <a href="https://www.youtube.com/@CollegeGroundReality" class="hover:text-realityGreen transition-colors">Youtube</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Auto-Update Year Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
